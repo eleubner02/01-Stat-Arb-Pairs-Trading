@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 # Launch the notebook
 jupyter notebook notebooks/pairs_trading_analysis_v1.ipynb
-
+```
 ## Notes & Assumptions
 
 * No leverage used.
