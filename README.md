@@ -1,14 +1,37 @@
 # 01-Stat-Arb-Pairs-Trading
 
-# This project is designed to build a technical foundation for quant trading. It will be guided by three principles:
+# Statistical Arbitrage: Cointegration‑Based Pairs Trading
+**LUV–AAL, 2020–24 Backtest**  
+Sharpe Ratio = 1.54 | Annualized Return = 2.49% | Max Drawdown = –1.32%
 
-## —Affirming Core Competencies: data ingestion and cleaning (pandas), statistical analysis and modeling (statsmodels), vectorized backtesting (algorithmic thinking) and performance attribution (risk/return analysis)
-## —Prioritzing Retention > Complexity: classic, well understood strategy (statistical arbitrage), to focus on high-quality implementation. Deep practical understanding of core tools and concepts
-## —Building a Narrative: End Product (well-documented GitHub repository) is a communication tool designed to tell a clear story. Take a quantitative concept, translate it into functional code, analyze its performance, and communicate results professionally
+## Summary
+* **Pair Selection**: LUV–AAL (Southwest & American Airlines), OLS hedge ratio β=0.842, ADF stationarity p=0.027.
+* **Trading Logic**: Z-score thresholds ±2.0, 16‑day time-stop, dollar‑neutral positions.
+* **Backtest window**: Jan 2020–Dec 2024; realistic T-costs = 2 bps/leg.
+* **Performance**: 30 round trip trades; Sharpe 1.54, Ann. Return 2.49% (unlevered), Max DD –1.32%.
 
-# We will employ a Statistical Arbitrage (stat arb) pairs trading strategy. This method leverages a stationary spread between cointegrated series; for example, if Stock A and Stock B are cointegrated and Stock A rises, we may simultaneously short Stock A and buy Stock B. Thus, regardless of overall market trends, we profit when the spread returns to normal. Such a strategy is valuable because it requires us to:
+## How to Reproduce
 
-## —Form a Hypothesis: "These two stocks are economically linked."
-## —Test it Statistically: Use tools like statsmodels to find evidence for that link.
-## —Generate a Signal: Develop a rule (e.g., "when the spread is 2 standard deviations from the mean") to identify a trading opportunity.
-## —Execute a Market-Neutral Strategy: By shorting one and buying the other, we are largely insulated from the overall market's movement. We are isolating the specific relationship we modeled.
+git clone https://github.com/eleubner02/01-Stat-Arb-Pairs-Trading.git
+cd 01-Stat-Arb-Pairs-Trading
+pip install -r requirements.txt
+jupyter notebook stat_arb.ipynb
+
+## Notes & Assumptions
+
+* No leverage used.
+* Trading costs fixed at 2 bps per leg.
+* Hedge ratio estimated via OLS; strategy keeps positions beta‑neutral.
+* No short‑sale constraints assumed.
+* Performance is unlevered and not optimized for production deployment.
+
+## Figures
+
+![Equity Curve](figures/equity_curve.png)
+![Z‑Score w/ Trades](figures/zscore_trades.png)
+
+## Out-of-Sample Note (IN PROGRESS)
+
+* OOS 2023-24: Sharpe = X, Y trades, stable vs in-sample.
+
+
