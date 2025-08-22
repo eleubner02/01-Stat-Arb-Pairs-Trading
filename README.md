@@ -12,10 +12,24 @@ Sharpe Ratio = 1.54 | Annualized Return = 2.49% | Max Drawdown = –1.32%
 
 ## How to Reproduce
 
+You can run this analysis in two ways:
+
+### Option 1: Run in Google Colab (recommended)
+This opens the notebook directly in Colab (no setup required):
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eleubner02/01-Stat-Arb-Pairs-Trading/blob/main/notebooks/pairs_trading_analysis_v1.ipynb)
+
+### Option 2: Run Locally
+```bash
+# Clone the repo
 git clone https://github.com/eleubner02/01-Stat-Arb-Pairs-Trading.git
 cd 01-Stat-Arb-Pairs-Trading
+
+# Install dependencies
 pip install -r requirements.txt
-jupyter notebook stat_arb.ipynb
+
+# Launch the notebook
+jupyter notebook notebooks/pairs_trading_analysis_v1.ipynb
 
 ## Notes & Assumptions
 
