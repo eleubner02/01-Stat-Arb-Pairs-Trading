@@ -44,7 +44,7 @@ jupyter notebook notebooks/pairs_trading_analysis_v1.ipynb
 ![Equity Curve](figures/equity_curve.png)
 ![Z‑Score w/ Trades](figures/zscore_trades.png)
 
-## Out-of-Sample Note (IN PROGRESS)
+## Out-of-Sample Note (In Development)
 
 * OOS 2023-24: Sharpe = X, Y trades, stable vs in-sample.
 
