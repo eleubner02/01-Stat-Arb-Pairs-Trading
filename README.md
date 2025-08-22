@@ -46,6 +46,6 @@ jupyter notebook notebooks/pairs_trading_analysis_v1.ipynb
 
 ## Out-of-Sample Note (In Development)
 
-* OOS 2023-24: Sharpe = X, Y trades, stable vs in-sample.
+* Next Steps: Isolate a 2023–2024 out-of-sample period to validate model robustness against recent market regimes.
 
 
